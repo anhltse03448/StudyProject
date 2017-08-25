@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anhtuan.studyproject.ledControl">
+
+    <RelativeLayout
+        android:id="@+id/viewControl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.anhtuan.studyproject.Control.FragmentControl"
+            android:id="@+id/fragmentControl"
+            tools:layout="@layout/fragment_fragment_control" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/viewControl"
+        android:id="@+id/viewSongs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewRecord">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.anhtuan.studyproject.PlayMusic.FragmentPlayMusic"
+            android:id="@+id/fragmentPlayMusic"
+            tools:layout="@layout/fragment_fragment_play_music" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewRecord"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.anhtuan.studyproject.PlayMusic.FragmentRecord"
+            android:id="@+id/fragmentRecord"
+            tools:layout="@layout/fragment_fragment_record" />
+    </RelativeLayout>
+
+</RelativeLayout>

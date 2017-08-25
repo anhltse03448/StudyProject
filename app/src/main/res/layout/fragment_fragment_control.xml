@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anhtuan.studyproject.Control.FragmentControl">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/viewLeft"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <RelativeLayout
+            android:id="@+id/viewSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dance"
+                android:layout_centerVertical="true"
+                android:id="@+id/tvDance"/>
+            <Switch
+                android:id="@+id/swtDance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvDance"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/viewSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btnDisconnect"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/btnConnect"
+                android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layoutDance"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/viewRight"
+        android:layout_alignRight="@+id/viewRight"
+        android:layout_alignTop="@+id/viewRight"
+        android:layout_alignBottom="@+id/viewRight"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/btnLeftRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnUpDown"
+            />
+
+        <Button
+            android:id="@+id/btnUpDown"
+            android:layout_centerInParent="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            />
+
+        <Button
+            android:layout_toRightOf="@id/btnUpDown"
+            android:id="@+id/btnRotate"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/viewRight"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/viewLeft">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/pgbSpeed">
+            <Button
+                android:id="@+id/btnUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_toLeftOf="@id/btnUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_toRightOf="@id/btnUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                />
+
+            <Button
+                android:id="@+id/btnDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pgbSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
